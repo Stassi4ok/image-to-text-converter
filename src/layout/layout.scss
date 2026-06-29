@@ -1,0 +1,25 @@
+@use '../styles//variables' as *;
+
+main {
+  width: clamp($min-width, 70%, $max-width);
+  margin: 0 auto;
+  max-height: 100vh;
+}
+header{
+    display:flex;
+    flex-direction:column;
+    gap:$gap-sm;
+    align-items:center;
+    margin:$gap-lg;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $gap-lg;
+  height: 80vh;
+}
+
+.text-decor{
+    color:$color-primary;
+}

@@ -1,0 +1,30 @@
+@use '../../styles//variables' as *;
+.bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+
+  background: linear-gradient(180deg, $color-bg, $color-bg-soft);
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  bottom: -20px;
+
+  background: rgba(138, 43, 226, 0.9); // фіолетовий
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.6);
+
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    transform: translateY(-110vh) scale(0.6);
+  }
+}

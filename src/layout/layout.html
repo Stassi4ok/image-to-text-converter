@@ -1,0 +1,18 @@
+<main>
+    <header>
+        <h1>Image to <samp class="text-decor">Text</samp>  Converter</h1>
+        <p>Upload an image and extract text from it</p>
+    </header>
+
+    <section>
+        <app-image-upload
+            (ocrWordsChange)="handleWords($event)">
+        </app-image-upload>
+
+        <app-text-result
+            [words]="ocrWords()">
+        </app-text-result>
+    </section>
+    <app-animated-bg></app-animated-bg>
+</main>
+

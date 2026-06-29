@@ -1,0 +1,55 @@
+<svg
+  [attr.width]="size"
+  [attr.height]="size"
+  viewBox="0 0 24 24"
+  fill="none"
+  [attr.stroke]="strokeColor"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+
+  <ng-container [ngSwitch]="name">
+
+    <!-- Upload -->
+    <g *ngSwitchCase="'upload'">
+      <path
+        d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"
+        [attr.stroke]="strokeColor"
+        stroke-width="2"
+        fill="none"
+      />
+    </g>
+
+    <!-- Copy -->
+    <g *ngSwitchCase="'copy'">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M21 8C21 6.34315 19.6569 5 18 5H10C8.34315 5 7 6.34315 7 8V20C7 21.6569 8.34315 23 10 23H18C19.6569 23 21 21.6569 21 20V8ZM19 8C19 7.44772 18.5523 7 18 7H10C9.44772 7 9 7.44772 9 8V20C9 20.5523 9.44772 21 10 21H18C18.5523 21 19 20.5523 19 20V8Z"
+        [attr.fill]="color"
+      />
+      <path
+        d="M6 3H16C16.5523 3 17 2.55228 17 2C17 1.44772 16.5523 1 16 1H6C4.34315 1 3 2.34315 3 4V18C3 18.5523 3.44772 19 4 19C4.55228 19 5 18.5523 5 18V4C5 3.44772 5.44772 3 6 3Z"
+        [attr.fill]="color"
+      />
+    </g>
+
+    <!-- Check -->
+    <g *ngSwitchCase="'check'">
+      <polyline
+        points="21 5 12 14 8 10"
+        fill="none"
+        [attr.stroke]="strokeColor"
+        stroke-width="2"
+      />
+      <path
+        d="M20.94,11A8.26,8.26,0,0,1,21,12a9,9,0,1,1-9-9,8.83,8.83,0,0,1,4,1"
+        fill="none"
+        [attr.stroke]="strokeColor"
+        stroke-width="2"
+      />
+    </g>
+
+  </ng-container>
+
+</svg>

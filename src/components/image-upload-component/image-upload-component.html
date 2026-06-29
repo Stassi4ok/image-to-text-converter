@@ -1,0 +1,36 @@
+<div class="container">
+
+  <header>
+    <h2>1. Upload <samp class="text-decor">Image</samp></h2>
+    <p>Upload a clear image (PNG or JPG, max 2MB)</p>
+  </header>
+
+  <!-- Upload -->
+  <article class="upload">
+    <app-icon name="upload" strokeColor="#4E48D4" [size]="100"></app-icon>
+    <input
+    #fileInput
+    type="file"
+    accept="image/png, image/jpeg"
+    hidden
+    (change)="onFileSelected($event)"
+  />
+  
+  <button type="button" (click)="fileInput.click()">
+    Choose Image
+  </button>
+  <!-- Error -->
+  <p class="error" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </p>
+  </article>
+  
+
+  <!-- Preview -->
+  <div class="preview" *ngIf="previewUrl">
+
+    <img [src]="previewUrl" alt="Preview Image" />
+    
+  </div>
+
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+
+    <header>
+    <h2>2. Extracted <samp class="text-decor">Text</samp></h2>
+    <p>Here is the text extracted from your image</p>
+  </header>
+
+  <textarea
+    readonly
+    [value]="text()"
+    placeholder="Waiting for your image...">
+  </textarea>
+  <div class="actions">
+    <button (click)="copy()" [disabled]="!text()">
+       <app-icon name="copy"  [size]="20"></app-icon>
+      Copy 
+     
+    </button>
+    <app-ocr-stats [words]="words"></app-ocr-stats>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+@use '../../styles//variables' as *;
+.stats {
+  display: flex;
+  gap: $gap-xs;
+}
+
+
+.label {
+  
+  opacity: 0.7;
+}
+
+.value {
+  
+  font-weight: 600;
+}
