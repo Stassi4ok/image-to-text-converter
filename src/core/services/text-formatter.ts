@@ -17,22 +17,17 @@ export interface OcrWord {
 })
 export class TextFormatterService {
 
-  /**
-   * Converts OCR words into formatted text.
-   */
   format(words: OcrWord[]): string {
 
     if (!words?.length) {
       return '';
     }
 
-    // Sort by Y first, then X
     const sorted = [...words].sort((a, b) => {
 
       const ay = a.bounding_box.y1;
       const by = b.bounding_box.y1;
 
-      // Same line
       if (Math.abs(ay - by) < 8) {
         return a.bounding_box.x1 - b.bounding_box.x1;
       }

@@ -14,11 +14,11 @@
 }
 
 header{
-    display:flex;
-    flex-direction:column;
-    gap:$gap-sm;
-  
-    margin:$gap-lg;
+  display:flex;
+  flex-direction:column;
+  gap:$gap-sm;
+
+  margin:$gap-lg;
 }
 
 .upload{

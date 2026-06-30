@@ -19,7 +19,6 @@ export class OcrService {
 
   private readonly apiUrl = 'https://api.api-ninjas.com/v1/imagetotext';
 
-  // ⚠️ краще винести в environment.ts
   private readonly apiKey = environment.apiKay;
 
   extractText(file: File): Observable<OcrResponseItem[]> {

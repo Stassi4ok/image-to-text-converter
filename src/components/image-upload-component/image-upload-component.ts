@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { OcrService } from '../../core/services/ocr';
 import { OcrWord } from '../../core/services/text-formatter';
 import {Icon} from '../../shared/icon/icon'
+
 @Component({
   selector: 'app-image-upload',
   standalone: true,
@@ -16,7 +17,7 @@ export class ImageUploadComponent {
   errorMessage: string | null = null;
   response: string | null = null;
 
-  private readonly maxSize = 2 * 1024 * 1024; // 2MB
+  private readonly maxSize = 2 * 2048; // 2MB
   private readonly ocrService = inject(OcrService);
 
   @Output() ocrWordsChange = new EventEmitter<OcrWord[]>();

@@ -12,7 +12,7 @@ type Particle = {
 @Component({
   selector: 'app-animated-bg',
   standalone: true,
-  imports: [CommonModule], // 👈 ОЦЕ ВАЖЛИВО
+  imports: [CommonModule],
   templateUrl: './animated-bg-component.html',
   styleUrls: ['./animated-bg-component.scss'],
 })

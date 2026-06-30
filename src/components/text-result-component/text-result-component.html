@@ -1,6 +1,6 @@
 <div class="container">
 
-    <header>
+  <header>
     <h2>2. Extracted <samp class="text-decor">Text</samp></h2>
     <p>Here is the text extracted from your image</p>
   </header>
@@ -14,7 +14,6 @@
     <button (click)="copy()" [disabled]="!text()">
        <app-icon name="copy"  [size]="20"></app-icon>
       Copy 
-     
     </button>
     <app-ocr-stats [words]="words"></app-ocr-stats>
   </div>

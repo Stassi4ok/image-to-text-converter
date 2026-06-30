@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "predeploy": "ng build --configuration production --base-href=/REPO_NAME/",
-    "deploy": "gh-pages -d dist/REPO_NAME"
+    "predeploy": "ng build --configuration production --base-href=/image-to-text-converter/",
+    "deploy": "gh-pages -d dist/image-to-text-converter/browser"
   },
   "private": true,
   "packageManager": "npm@11.11.1",

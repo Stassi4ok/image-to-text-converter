@@ -9,20 +9,22 @@
   <article class="upload">
     <app-icon name="upload" strokeColor="#4E48D4" [size]="100"></app-icon>
     <input
-    #fileInput
-    type="file"
-    accept="image/png, image/jpeg"
-    hidden
-    (change)="onFileSelected($event)"
-  />
+      #fileInput
+      type="file"
+      accept="image/png, image/jpeg"
+      hidden
+      (change)="onFileSelected($event)"
+    />
   
-  <button type="button" (click)="fileInput.click()">
-    Choose Image
-  </button>
-  <!-- Error -->
-  <p class="error" *ngIf="errorMessage">
-    {{ errorMessage }}
-  </p>
+    <button type="button" (click)="fileInput.click()">
+      Choose Image
+    </button>
+
+    <!-- Error -->
+    <p class="error" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </p>
+
   </article>
   
 
